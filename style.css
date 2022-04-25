@@ -1,0 +1,143 @@
+html {
+    background-color: #22222c;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: #22222c;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    width: 350px;
+}
+
+@media (max-width: 400px) {
+    body {
+        width: calc(100% - 20px);
+    }
+}
+
+.header {
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+}
+
+.header label {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.header input {
+    padding: 10px;
+    border: 2px solid #ffffff20;
+    background-color: #303039;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 5px;
+    outline: 0;
+    transition: .3s ease;
+}
+.header input:focus {
+    border: 2px solid #ffffff50;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    width: calc(100% - 20px);
+    position: relative;
+}
+
+.result {
+    background-color: #303039;
+    width: calc(100% - 20px);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.result .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.result h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.expand {
+    display: none;
+}
+
+.info {
+    display: none;
+    height: 1%;
+    overflow: hidden;
+    text-overflow: clip;
+    animation: .5s popIn forwards;
+    margin-top: 5px;
+}
+.info .photo {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.info p {
+    margin: 5px 0 0;
+}
+
+.location {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+@keyframes popIn {
+    from {
+        height: 1%;
+    }
+    to {
+        height: 100%;
+    }
+}
+.expand:checked ~ .info {
+    display: block;
+}
+.location {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.location:after {
+    position: absolute;
+    right: 10px;
+    content: "+";
+}
+.location:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: "";
+}
+.expand:checked ~ .location:after {
+    content: "-";
+}
+
+.results > p {
+    text-align: center;
+}
