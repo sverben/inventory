@@ -117,7 +117,6 @@ body {
     display: block;
 }
 .location {
-    width: 100%;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -125,14 +124,6 @@ body {
     position: absolute;
     right: 10px;
     content: "+";
-}
-.location:before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    content: "";
 }
 .expand:checked ~ .location:after {
     content: "-";
