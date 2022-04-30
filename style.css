@@ -62,6 +62,7 @@ body {
     width: calc(100% - 20px);
     border-radius: 5px;
     padding: 10px;
+    position: relative;
 }
 
 .result .title {
@@ -119,6 +120,14 @@ body {
 .location {
     padding-top: 5px;
     padding-bottom: 5px;
+}
+.location:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
 .location:after {
     position: absolute;
